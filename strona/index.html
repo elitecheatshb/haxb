@@ -648,58 +648,8 @@
     }
     </style>
     <script>
-document.getElementById('opmode-buy').addEventListener('click', function () {
-  const container = document.createElement('div');
-  container.id = 'paypal-temp-button';
-  document.body.appendChild(container);
-
-  paypal.Buttons({
-    style: { layout: 'vertical', color: 'blue', shape: 'pill', label: 'paypal' },
-    createOrder: function(data, actions) {
-      return actions.order.create({
-        purchase_units: [{
-          amount: { value: '19.99' }
-        }]
-      });
-    },
-    onApprove: function(data, actions) {
-      return actions.order.capture().then(function(details) {
-        alert('Dziękujemy za zakup, ' + details.payer.name.given_name + '!');
-        // Tu można dodać przekierowanie lub zapis na backendzie
-      });
-    },
-    onCancel: function() {
-      alert('Płatność została anulowana.');
-      container.remove();
-    }
-  }).render('#paypal-temp-button');
-  <!-- Dodaj to w sekcji head lub przed końcem body -->
-<script src="https://www.paypal.com/sdk/js?client-id=TWÓJ_CLIENT_ID"></script>
-
-<!-- Przycisk PayPal -->
-<div id="paypal-button-container"></div>
-<script>
-  paypal.Buttons({
-    createOrder: function(data, actions) {
-      return actions.order.create({
-        purchase_units: [{
-          amount: {
-            value: '100.00'  // Zmienna wartość produktu
-          }
-        }]
-      });
-    },
-    onApprove: function(data, actions) {
-      return actions.order.capture().then(function(details) {
-        alert('Transakcja zakończona. Witamy ' + details.payer.name.given_name);
-      });
-    }
-  }).render('#paypal-button-container');
 </script>
 
-});
-</script>
-<script src="https://www.paypal.com/sdk/js?client-id=TWÓJ_CLIENT_ID"></script>
 </head>
 <body>
     <header>
@@ -754,7 +704,8 @@ document.getElementById('opmode-buy').addEventListener('click', function () {
                         <span class="badge badge-bestseller">BESTSELLER</span>
                         <img src="haxball2.png" alt="HaxBall Pro" width="400" height="200">
                         <a href="https://youtu.be/P9xfmq_fBvY?si=W6RkmqX-czNBt0LK" class="video-link" target="_blank">
-                            <div class="play-button">▶</div>
+                            <div class="play-button">▶</div><a
+
                         </a>
                     </div>
                     <div class="product-details">
@@ -769,7 +720,8 @@ document.getElementById('opmode-buy').addEventListener('click', function () {
                         </ul>
                         <div class="product-meta">
                             <div class="product-price">$19.99</div>
-                            <button class="product-buy" id="opmode-buy">Buy Now</button>
+                            <button class="product-buy" id="opmode-buy">Buy Now<a href="#discord" class="discord-section></a>
+/button>
                         </div>
                     </div>
                 </div>
