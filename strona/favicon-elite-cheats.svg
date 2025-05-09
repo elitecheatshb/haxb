@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Tło z gradientem -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e" />
+      <stop offset="100%" stop-color="#0f3460" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Okrągły bazowy kształt z gradientem -->
+  <circle cx="16" cy="16" r="15" fill="url(#bgGradient)" stroke="#e94560" stroke-width="1" />
+  
+  <!-- Element dekoracyjny - świecący element -->
+  <path d="M6,16 C6,10.5 10.5,6 16,6 C21.5,6 26,10.5 26,16" stroke="#e94560" stroke-width="1.5" fill="none" stroke-linecap="round" />
+  
+  <!-- Litera "E" stylizowana -->
+  <path d="M12,11 L20,11 M12,11 L12,21 M12,16 L18,16 M12,21 L20,21" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Ikona korony -->
+  <path d="M19,14 L21,12 L23,15 L25,11 L24,17 L18,17 L17,11 L19,15 L21,12" transform="translate(-8, 3) scale(0.8)" fill="#e94560" stroke="#ffcc00" stroke-width="0.5" />
+</svg>

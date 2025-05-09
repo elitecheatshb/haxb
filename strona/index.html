@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Cheats - Premium HaxBall Cheats</title>
+    
+    <!-- Ikona favicon -->
+    <link rel="icon" href="favicon-elite-cheats.svg" type="image/x-icon">
+    <!-- PayPal SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=TWÓJ_CLIENT_ID"></script>
+
+
+    <style>
+
+        :root {
+            --primary-color: #6c12c7;
+            --secondary-color: #00eeff;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #ffffff;
+            --accent-color: #ff0055;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #fff, var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            text-shadow: 0 2px 10px rgba(0, 238, 255, 0.3);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .hero {
+            background-image: url('haxball-background.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .featured-products {
+            padding: 80px 0;
+        }
+        
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .product-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .play-button:hover {
+            background: var(--primary-color);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        .product-details {
+            padding: 20px;
+        }
+        
+        .product-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .product-description {
+            color: #b8b8b8;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        
+        .product-buy {
+            padding: 8px 20px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .product-buy:hover {
+            background: var(--secondary-color);
+            color: #000;
+        }
+        
+        .features {
+            padding: 80px 0;
+            background-color: #0a0a0a;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .testimonials {
+            padding: 80px 0;
+        }
+        
+        .testimonial-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(108, 18, 199, 0.1);
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-details h4 {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .author-details p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .faq {
+            padding: 80px 0;
+            background-color: #0a0a0a;
+        }
+        
+        .faq-item {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(108, 18, 199, 0.1);
+        }
+        
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: #b8b8b8;
+        }
+        
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta .btn {
+            background: var(--dark-bg);
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            padding: 15px 40px;
+        }
+        
+        footer {
+            background-color: #080808;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h3 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #b8b8b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: #b8b8b8;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #2a2a2a;
+            color: #777;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-heading {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Badge styles */
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 3px;
+            z-index: 10;
+        }
+        
+        .badge-new {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .badge-bestseller {
+            background-color: #ffc107;
+            color: black;
+        }
+        
+        .badge-just-released {
+            background-color: #4caf50;
+            color: white;
+        }
+        
+        /* Rating stars */
+        .rating {
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+        
+        /* Counter animation */
+        .counter-section {
+            padding: 50px 0;
+            background-color: var(--card-bg);
+            text-align: center;
+        }
+        
+        .counter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .counter-item {
+            padding: 20px;
+        }
+        
+        .counter-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .counter-label {
+            font-size: 1.1rem;
+            color: #b8b8b8;
+        }
+        
+        /* Discord section */
+        .discord-section {
+            padding: 80px 0;
+            text-align: center;
+            background-color: #7289DA;
+            color: white;
+        }
+        
+        .discord-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .discord-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+        
+        .discord-heading {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .discord-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .discord-tag {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        
+        .discord-btn {
+            background-color: white;
+            color: #7289DA;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .discord-btn:hover {
+            background-color: #f2f2f2;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Video link styles */
+        .video-link {
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        
+    .paypal-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #111;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+
+    .paypal-info img {
+      height: 40px;
+    }
+
+    .paypal-info span {
+      font-size: 1rem;
+      color: #aaa;
+    }
+
+    .paypal-icon-footer img {
+      height: 30px;
+      margin-top: 0.5rem;
+    }
+        footer {
+      background: #111;
+      padding: 2rem;
+      text-align: center;
+      color: #666;
+      margin-top: 4rem;
+    }
+    </style>
+    <script>
+document.getElementById('opmode-buy').addEventListener('click', function () {
+  const container = document.createElement('div');
+  container.id = 'paypal-temp-button';
+  document.body.appendChild(container);
+
+  paypal.Buttons({
+    style: { layout: 'vertical', color: 'blue', shape: 'pill', label: 'paypal' },
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: { value: '19.99' }
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        alert('Dziękujemy za zakup, ' + details.payer.name.given_name + '!');
+        // Tu można dodać przekierowanie lub zapis na backendzie
+      });
+    },
+    onCancel: function() {
+      alert('Płatność została anulowana.');
+      container.remove();
+    }
+  }).render('#paypal-temp-button');
+});
+</script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">Elite Cheats</div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#features">Features</a>
+                    <a href="#discord">Discord</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Dominate HaxBall</h1>
+            <p>Our advanced HaxBall cheats give you the edge that others can only dream of. 
+               Best HaxBall cheats for the most demanding players.</p>
+            <a href="#products" class="btn">View Products</a>
+        </div>
+    </section>
+    
+    <section class="counter-section">
+        <div class="container">
+            <div class="counter-grid">
+                <div class="counter-item">
+                    <div class="counter-number">50+</div>
+                    <div class="counter-label">Satisfied customers</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number">24/7</div>
+                    <div class="counter-label">Technical support</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number">1 min</div>
+                    <div class="counter-label">Setup time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="featured-products">
+        <div class="container">
+            <h2 class="section-heading">Our Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge badge-bestseller">BESTSELLER</span>
+                        <img src="haxball2.png" alt="HaxBall Pro" width="400" height="200">
+                        <a href="https://youtu.be/P9xfmq_fBvY?si=W6RkmqX-czNBt0LK" class="video-link" target="_blank">
+                            <div class="play-button">▶</div>
+                        </a>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">OP Mode</h3>
+                        <div class="rating">★★★★</div>
+                        <p class="product-description">With OP Mode, you become more unpredictable to your opponents, improving your movement significantly. Your fake moves become much more effective, and ball control is enhanced for better gameplay.</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px; color: #b8b8b8;">
+                            <li>Enhanced movement control</li>
+                            <li>More effective fake x</li>
+                            <li>Better ball contact precision</li>
+                            <li>Aimbot included</li>
+                        </ul>
+                        <div class="product-meta">
+                            <div class="product-price">$19.99</div>
+                            <button class="product-buy" id="opmode-buy">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge badge-just-released">JUST RELEASED</span>
+                        <img src="/api/placeholder/400/200" alt="HaxBall Vision">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">SUPER Mode</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="product-description">The most powerful cheat in HaxBall. Similar to OP Mode but significantly stronger, Supermode gives you unparalleled control and precision that will make you unstoppable on the field.</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px; color: #b8b8b8;">
+                            <li>Advanced movement mechanics</li>
+                            <li>Superior ball control</li>
+                            <li>Maximum unpredictability</li>
+                            <li>Elite opponent-blocking precision</li>
+                            <li>Amazing fake x</li>
+                        
+                        </ul>
+                        <div class="product-meta">
+                            <div class="product-price">$39.99</div>
+                            <button class="product-buy">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge badge-new">COMING SOON</span>
+                        <img src="/api/placeholder/400/200" alt="HaxBall Speed">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Macro</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="product-description">Macros in Haxball are tools that automate actions in the game, mainly increasing speed and efficiency.</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px; color: #b8b8b8;">
+                            <li>Being faster</li>
+                            <li>Created with AutoHotkey scripts</li>
+                            <li>Win every Cutaway</li>
+                            <li>Double wall skill</li>
+                        </ul>
+                        <div class="product-meta">
+                            <div class="product-price">SOON</div>
+                            <button class="product-buy" disabled>Coming Soon</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-heading">Why Choose Our Products?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3 class="feature-title">Gain the Edge</h3>
+                    <p>Our cheats provide an unfair advantage that will make you unstoppable in every HaxBall match.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3 class="feature-title">Quick Setup</h3>
+                    <p>Installation takes just 1 minute. Our intuitive control panel allows you to customize all features to your needs.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="feature-title">24/7 Support</h3>
+                    <p>Our technical support team is available around the clock to help you resolve any issues you might encounter.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Security</h3>
+                    <p>Your data is safe. Our software doesn't collect any personal information or install malicious software on your device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="discord" class="discord-section">
+        <div class="discord-container">
+            <div class="discord-icon">
+                <svg width="80" height="80" viewBox="0 0 71 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1.6353 44.105 3.0834 43.6209 4.2216C38.1637 3.4046 32.7345 3.4046 27.3892 4.2216C26.905 3.0581 26.1886 1.6353 25.5617 0.525289C25.5141 0.443589 25.4218 0.40133 25.3294 0.41542C20.2584 1.2888 15.4057 2.8186 10.8776 4.8978C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795C1.57795 18.7309 -0.943561 32.1443 0.293408 45.3914C0.299005 45.4562 0.335386 45.5182 0.385761 45.5576C6.45866 50.0174 12.3413 52.7249 18.1147 54.5195C18.2071 54.5477 18.305 54.5139 18.3638 54.4378C19.7295 52.5728 20.9469 50.6063 21.9907 48.5383C22.0523 48.4172 21.9935 48.2735 21.8676 48.2256C19.9366 47.4931 18.0979 46.6 16.3292 45.5858C16.1893 45.5041 16.1781 45.304 16.3068 45.2082C16.679 44.9293 17.0513 44.6391 17.4067 44.3461C17.471 44.2926 17.5606 44.2813 17.6362 44.3151C29.2558 49.6202 41.8354 49.6202 53.3179 44.3151C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433C53.9057 44.6363 54.2779 44.9293 54.6529 45.2082C54.7816 45.304 54.7732 45.5041 54.6333 45.5858C52.8646 46.6197 51.0259 47.4931 49.0921 48.2228C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383C50.038 50.6034 51.2554 52.5699 52.5959 54.435C52.6519 54.5139 52.7526 54.5477 52.845 54.5195C58.6464 52.7249 64.529 50.0174 70.6019 45.5576C70.6551 45.5182 70.6887 45.459 70.6943 45.3942C72.1747 30.0791 68.2147 16.7757 60.1968 4.9823C60.1772 4.9429 60.1437 4.9147 60.1045 4.8978ZM23.7259 37.3253C20.2276 37.3253 17.3451 34.1136 17.3451 30.1693C17.3451 26.225 20.1717 23.0133 23.7259 23.0133C27.308 23.0133 30.1626 26.2532 30.1066 30.1693C30.1066 34.1136 27.28 37.3253 23.7259 37.3253ZM47.3178 37.3253C43.8196 37.3253 40.9371 34.1136 40.9371 30.1693C40.9371 26.225 43.7636 23.0133 47.3178 23.0133C50.9 23.0133 53.7545 26.2532 53.6986 30.1693C53.6986 34.1136 50.9 37.3253 47.3178 37.3253Z" fill="#ffffff"/>
+                </svg>
+            </div>
+            <h2 class="discord-heading">Join Our Discord Community</h2>
+            <p class="discord-description">Get instant support, exclusive updates, and connect with other HaxBall players. Join our active community today!</p>
+            <div class="discord-tag">Discord: haxballcheats</div>
+            <a href="#" class="discord-btn">Join Server</a>
+        </div>
+    </section>
+
+<div class="paypal-info">
+        <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal">
+        <span>Payment handled via PayPal – secure and instant.</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>© 2025 Elite Cheats – All rights reserved.
+</div>
+    <div class="paypal-icon-footer">
+      <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal Akceptowany">
+    </div>
+  </footer>
+<<<<<<< HEAD
+  </html>
+=======
+>>>>>>> 4dbecb0593c5e4819673a3a5e7f78222b013c87d
