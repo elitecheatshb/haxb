@@ -673,8 +673,19 @@ document.getElementById('opmode-buy').addEventListener('click', function () {
       container.remove();
     }
   }).render('#paypal-temp-button');
-});
+}); 
 </script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buyButton = document.getElementById('opmode-buy');
+            if (buyButton) {
+                buyButton.addEventListener('click', function() {
+                    document.getElementById('discord-section').scrollIntoView({behavior: 'smooth'});
+                });
+            }
+        });
+    </script>
+    <script src="path/to/script.js"></script>
 
 </head>
 <body>
@@ -745,7 +756,7 @@ document.getElementById('opmode-buy').addEventListener('click', function () {
                         </ul>
                         <div class="product-meta">
                             <div class="product-price">$19.99</div>
-                            <button class="product-buy" id="opmode-buy">Buy Now</button>
+                            <button class="product-buy" id="opmode-buy" onclick="document.getElementById('discord').scrollIntoView({behavior: 'smooth'})">Buy Now</button>
                         </div>
                     </div>
                 </div>
