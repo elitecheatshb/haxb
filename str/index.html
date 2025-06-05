@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaxBall Scripts Pro - Premium HaxBall Tools</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-code"></i>
+                <span>HaxBall Scripts Pro</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link" data-translate="nav-home">Home</a>
+                <a href="#products" class="nav-link" data-translate="nav-products">Cheats</a>
+                <a href="#testimonials" class="nav-link" data-translate="nav-testimonials">Reviews</a>
+                <a href="#support" class="nav-link" data-translate="nav-support">Support</a>
+                <a href="#discord" class="nav-link" data-translate="nav-discord">Discord</a>
+            </div>
+            <div class="nav-controls">
+                <select id="language-selector" class="language-select">
+                    <option value="en">🇺🇸 EN</option>
+                    <option value="es">🇪🇸 ES</option>
+                </select>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-translate="hero-title">Premium HaxBall Cheats & Tools</h1>
+                <p class="hero-subtitle" data-translate="hero-subtitle">Professional-grade cheats designed to dominate HaxBall matches and improve your gameplay</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label" data-translate="stat-customers">Satisfied Players</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label" data-translate="stat-support">Support Available</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99%</span>
+                        <span class="stat-label" data-translate="stat-uptime">Success Rate</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary" data-translate="hero-cta">Explore Cheats</a>
+                    <a href="#discord" class="btn btn-secondary" data-translate="hero-discord">Join Discord</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-preview">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="code-title">haxball-script.js</span>
+                    </div>
+                    <div class="code-content">
+                        <div class="code-line"><span class="keyword">const</span> <span class="variable">opMode</span> = <span class="string">'enabled'</span>;</div>
+                        <div class="code-line"><span class="keyword">function</span> <span class="function">enhanceMovement</span>() {</div>
+                        <div class="code-line">  <span class="keyword">return</span> <span class="string">'unpredictable'</span>;</div>
+                        <div class="code-line">}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title" data-translate="products-title">Our Premium HaxBall Cheats</h2>
+            <p class="section-subtitle" data-translate="products-subtitle">Choose from our collection of professional HaxBall enhancement tools</p>
+            
+            <div class="products-grid">
+                <!-- Product 1 - OP Mode -->
+                <div class="product-card featured">
+                    <div class="product-badge sale" data-translate="badge-sale">ON SALE</div>
+                    <div class="product-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="product-title" data-translate="product1-title">OP Mode</h3>
+                    <p class="product-description" data-translate="product1-desc">With OP Mode, you become more unpredictable to your opponents, improving your movement significantly. Your better fake x become much more effective, and ball control is enhanced for better gameplay.</p>
+                    <div class="product-features">
+                        <span class="feature" data-translate="feature-movement">Enhanced Movement</span>
+                        <span class="feature" data-translate="feature-control">Ball Control</span>
+                        <span class="feature" data-translate="feature-fake">Better Fake X</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-old">$29.99</span>
+                        <span class="price-current">$19.99</span>
+                    </div>
+                    <button class="btn btn-primary buy-btn" data-product="OP Mode" data-translate="btn-buy">Buy Now</button>
+                </div>
+
+                <!-- Product 2 - Macro -->
+                <div class="product-card">
+                    <div class="product-badge coming-soon" data-translate="badge-coming">COMING SOON</div>
+                    <div class="product-icon">
+                        <i class="fas fa-mouse"></i>
+                    </div>
+                    <h3 class="product-title" data-translate="product2-title">Macro</h3>
+                    <p class="product-description" data-translate="product2-desc">Advanced macro system for faster clicking and superior opponent penetration. Automate your actions for competitive advantage.</p>
+                    <div class="product-features">
+                        <span class="feature" data-translate="feature-speed">Speed Boost</span>
+                        <span class="feature" data-translate="feature-penetration">Opponent Penetration</span>
+                        <span class="feature" data-translate="feature-automation">Full Automation</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-current">$4.99</span>
+                    </div>
+                    <button class="btn btn-disabled" disabled data-translate="btn-notify">Notify Me</button>
+                </div>
+
+                <!-- Product 3 - SUPERMODE -->
+                <div class="product-card unavailable">
+                    <div class="product-badge unavailable-badge" data-translate="badge-unavailable">TEMPORARILY UNAVAILABLE</div>
+                    <div class="product-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="product-title" data-translate="product3-title">SUPERMODE</h3>
+                    <p class="product-description" data-translate="product3-desc">The ultimate HaxBall enhancement - more powerful than OP Mode with advanced features and superior performance.</p>
+                    <div class="product-features">
+                        <span class="feature" data-translate="feature-power">Maximum Power</span>
+                        <span class="feature" data-translate="feature-advanced">Advanced Features</span>
+                        <span class="feature" data-translate="feature-superior">Superior Performance</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-current">$49.99</span>
+                    </div>
+                    <button class="btn btn-disabled" disabled data-translate="btn-unavailable">Currently Unavailable</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-translate="testimonials-title">What Our Players Say About OP Mode</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-translate="testimonial1">"OP Mode completely changed my HaxBall game! My movement is so much better and opponents can't predict me anymore!"</p>
+                    <div class="testimonial-author">
+                        <strong>Anonymous Player</strong>
+                        <span data-translate="testimonial1-role">Anonymous Player</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-translate="testimonial2">"The better fake x feature is incredible! I can fool any defender now. Best purchase ever!"</p>
+                    <div class="testimonial-author">
+                        <strong>Anonymous Player</strong>
+                        <span data-translate="testimonial2-role">Anonymous Player</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-translate="testimonial3">"OP Mode made me unstoppable! The ball control improvement is insane, I dominate every match!"</p>
+                    <div class="testimonial-author">
+                        <strong>Anonymous Player</strong>
+                        <span data-translate="testimonial3-role">Anonymous Player</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="support">
+        <div class="container">
+            <div class="support-content">
+                <div class="support-info">
+                    <h2 class="section-title" data-translate="support-title">24/7 Premium Support</h2>
+                    <p class="support-description" data-translate="support-desc">Our dedicated support team is available around the clock to help you with installation, setup, and any issues.</p>
+                    <div class="support-features">
+                        <div class="support-feature">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4 data-translate="support-feature1-title">24/7 Availability</h4>
+                                <p data-translate="support-feature1-desc">Round-the-clock support via Discord and private messages</p>
+                            </div>
+                        </div>
+                        <div class="support-feature">
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <h4 data-translate="support-feature2-title">Fast Response</h4>
+                                <p data-translate="support-feature2-desc">Average response time under 15 minutes</p>
+                            </div>
+                        </div>
+                        <div class="support-feature">
+                            <i class="fas fa-user-graduate"></i>
+                            <div>
+                                <h4 data-translate="support-feature3-title">Expert Team</h4>
+                                <p data-translate="support-feature3-desc">Experienced HaxBall developers ready to help</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="support-image">
+                    <div class="support-chat">
+                        <div class="chat-header">
+                            <div class="chat-status">
+                                <span class="status-dot"></span>
+                                <span data-translate="chat-online">Support Online</span>
+                            </div>
+                        </div>
+                        <div class="chat-messages">
+                            <div class="message support-message">
+                                <span data-translate="chat-message1">How can I help you today?</span>
+                            </div>
+                            <div class="message user-message">
+                                <span data-translate="chat-message2">Need help with OP Mode installation</span>
+                            </div>
+                            <div class="message support-message">
+                                <span data-translate="chat-message3">I'll guide you through the setup process!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discord Section -->
+    <section id="discord" class="discord">
+        <div class="container">
+            <div class="discord-content">
+                <div class="discord-info">
+                    <div class="discord-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h2 class="section-title" data-translate="discord-title">Join Our Discord for Exclusive Cheat Offers</h2>
+                    <p class="discord-description" data-translate="discord-desc">Get access to exclusive cheat deals, early releases, and special discounts available only on our Discord server</p>
+                    <div class="discord-creator">
+                        <div class="creator-avatar">
+                            <i class="fas fa-user-crown"></i>
+                        </div>
+                        <div class="creator-info">
+                            <h4 data-translate="creator-title">Created by</h4>
+                            <p class="creator-name">haxballcheats</p>
+                            <span class="creator-badge" data-translate="creator-badge">Verified Developer</span>
+                        </div>
+                    </div>
+                    <div class="discord-stats">
+                        <div class="discord-stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label" data-translate="discord-active">Online</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="discord-preview">
+                    <div class="discord-window">
+                        <div class="discord-header">
+                            <span>HaxBall Cheats Offers</span>
+                            <div class="discord-controls">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="discord-channels">
+                            <div class="channel active">
+                                <i class="fas fa-hashtag"></i>
+                                <span data-translate="channel-general">general</span>
+                            </div>
+                            <div class="channel">
+                                <i class="fas fa-hashtag"></i>
+                                <span data-translate="channel-support">support</span>
+                            </div>
+                            <div class="channel">
+                                <i class="fas fa-hashtag"></i>
+                                <span data-translate="channel-updates">updates</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="discord-cta">
+                <a href="https://discord.com/invite/anjpXSpxYK" class="btn btn-discord" target="_blank">
+                    <i class="fab fa-discord"></i>
+                    <span data-translate="discord-join">Join Discord Server</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Info -->
+    <section class="payment-info">
+        <div class="container">
+            <div class="payment-methods">
+                <h3 data-translate="payment-title">Secure Payment Method</h3>
+                <div class="payment-icons">
+                    <div class="payment-method">
+                        <i class="fab fa-paypal"></i>
+                        <span>PayPal Only</span>
+                    </div>
+                </div>
+                <p class="payment-security" data-translate="payment-security">All transactions are secured with PayPal's advanced encryption</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-code"></i>
+                        <span>HaxBall Scripts Pro</span>
+                    </div>
+                    <p data-translate="footer-desc">Premium HaxBall cheats and enhancement tools for competitive players</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HaxBall Scripts Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
